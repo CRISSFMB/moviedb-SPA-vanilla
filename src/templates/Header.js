@@ -9,7 +9,7 @@ const Header = () => {
                                 <i class="fas fa-ticket-alt logo__title"></i>
                                 <span class="logo__name">SEARCH MOVIE</span>
                             </div>
-                            <img src=${logo} class="navbar__img" alt="by the movie DB">
+                            <img src=${logo} class="navbar__img" alt="logo movie DB">
                         </div>
                     </nav>
                 </div>
