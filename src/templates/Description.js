@@ -1,12 +1,9 @@
 const Description = () => {
-    const view = `
-
+  const view = `
         <h1>descriptcion component</h1>
-
-        
     `;
 
-    return view;
+  return view;
 };
 
 export default Description;

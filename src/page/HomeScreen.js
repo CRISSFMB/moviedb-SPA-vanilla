@@ -1,5 +1,4 @@
 import getData from "../utils/getData";
-
 const HomeScreen = async () => {
   const { results: data } = await getData;
   const view = `

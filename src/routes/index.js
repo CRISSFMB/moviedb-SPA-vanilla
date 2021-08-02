@@ -14,29 +14,29 @@ import resolvesRoutes from "../utils/resolveRoutes";
 /*routes*/
 
 const routes = {
-    "/": HomeScreen,
-    "/:id": Header,
-    "/contact": "contact",
+  "/": HomeScreen,
+  "/:id": Header,
+  "/description": Error404Screen,
 };
 
 /*router*/
 
-const router = async() => {
-    /*selects*/
-    const header = null || document.getElementById("header");
-    const content = null || document.getElementById("content");
+const router = async () => {
+  /*selects*/
+  const header = null || document.getElementById("header");
+  const content = null || document.getElementById("content");
 
-    header.innerHTML = await Header();
+  header.innerHTML = await Header();
 
-    /*getquery*/
-    let query = getQuery();
-    let routestring = await resolvesRoutes(query);
+  /*getquery*/
+  let query = getQuery();
+  let routestring = await resolvesRoutes(query);
 
-    /*validate router */
-    let render = routes[routestring] ? routes[routestring] : Error404Screen;
+  /*validate router */
+  let render = routes[routestring] ? routes[routestring] : Error404Screen;
 
-    /*render my content*/
-    content.innerHTML = await render();
+  /*render my content*/
+  content.innerHTML = await render();
 };
 
 export default router;
