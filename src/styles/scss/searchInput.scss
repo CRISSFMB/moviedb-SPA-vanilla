@@ -1,0 +1,35 @@
+.search-section {
+    background-color: $black;
+}
+
+.search {
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    &__input {
+        display: block;
+        border-radius: 2rem;
+        border: none;
+        width: 100%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 6rem;
+        background-color: $gray;
+        color: $white;
+        &:focus {
+            outline: none;
+        }
+        &::placeholder {
+            color: $white-light;
+        }
+    }
+    .fa-search {
+        color: white;
+        position: absolute;
+        left: 4rem;
+        font-size: 2.5rem;
+    }
+}
