@@ -1,4 +1,4 @@
-const Error404 = () => {
+const Error404Screen = () => {
     const view = `
       <div class="Error404">
         <h2>Error 404</h2>
@@ -7,4 +7,4 @@ const Error404 = () => {
     return view;
 };
 
-export default Error404;
+export default Error404Screen;

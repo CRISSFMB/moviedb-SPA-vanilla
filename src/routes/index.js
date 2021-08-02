@@ -4,7 +4,7 @@ import Header from "../templates/Header";
 /*pages Screen*/
 
 import HomeScreen from "../page/HomeScreen";
-import Error404 from "../page/Error404Screen";
+import Error404Screen from "../page/Error404Screen";
 
 /*utils*/
 
@@ -33,7 +33,7 @@ const router = async() => {
     let routestring = await resolvesRoutes(query);
 
     /*validate router */
-    let render = routes[routestring] ? routes[routestring] : Error404;
+    let render = routes[routestring] ? routes[routestring] : Error404Screen;
 
     /*render my content*/
     content.innerHTML = await render();
