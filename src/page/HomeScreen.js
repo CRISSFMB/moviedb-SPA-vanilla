@@ -16,16 +16,17 @@ const HomeScreen = async () => {
         <section class="section-movies" id="spinner">
             <h3 class="text-center">Popular Movies </h3>
             <div class="card-wrapper">
-              ${data.map((movie) => {
-                const pathImg = "https://image.tmdb.org/t/p/w500";
-                const {
-                  id,
-                  title,
-                  vote_average: rating,
-                  poster_path: img,
-                } = movie;
+              ${data
+                .map((movie) => {
+                  const pathImg = "https://image.tmdb.org/t/p/w500";
+                  const {
+                    id,
+                    title,
+                    vote_average: rating,
+                    poster_path: img,
+                  } = movie;
 
-                return `
+                  return `
                   <div class="card">
                     <div class="card__header">
                         <a href="#" class="card__header">
@@ -41,7 +42,8 @@ const HomeScreen = async () => {
                     </div>
                   </div>
                 `;
-              })}
+                })
+                .join("")}
             </div>
         </section>
     </div>`;
