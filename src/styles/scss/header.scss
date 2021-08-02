@@ -18,7 +18,7 @@ header {
 }
 
 .hero {
-    background-image: linear-gradient( to right, rgba(26, 42, 108, 0.372), rgba(178, 31, 31, 0.55), rgba(171, 139, 69, 0.749)), url("../../dist/images/hero.jpg");
+    background-image: linear-gradient( to right, rgba(26, 42, 108, 0.372), rgba(178, 31, 31, 0.55), rgba(171, 139, 69, 0.749)), url("../../assets/images/hero.jpg");
     height: calc(100vh - 10vh);
     @include tablet {
         height: calc(100vh - 15vh);
