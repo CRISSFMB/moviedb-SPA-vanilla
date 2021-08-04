@@ -1,11 +1,12 @@
 import getData from "../utils/getData";
-const HomeScreen = async () => {
-  const { results: data } = await getData;
+const HomeScreen = async (value = "dark") => {
+  console.log(value);
+  const { results: data } = await getData(value);
   const view = `
     <section class="search-section">
       <div class="container">
           <form class="search" id="form-search">
-              <input type="text" placeholder="Search Movie" class="search__input" id="Search" autocomplete="off">
+              <input type="text" placeholder="Search Movie" name="search" class="search__input" id="Search" autocomplete="off">
               <i class="fas fa-search"></i>
           </form>
       </div>

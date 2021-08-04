@@ -8,6 +8,8 @@ import Error404Screen from "../page/Error404Screen";
 
 /*utils*/
 
+//Listener
+import searchForm from "../utils/searchForm";
 import getQuery from "../utils/getQuery";
 import resolvesRoutes from "../utils/resolveRoutes";
 
@@ -37,6 +39,9 @@ const router = async () => {
 
   /*render my content*/
   content.innerHTML = await render();
+
+  const form = document.getElementById("form-search");
+  form.addEventListener("submit", searchForm);
 };
 
 export default router;
