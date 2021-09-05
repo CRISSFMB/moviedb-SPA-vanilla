@@ -5,6 +5,7 @@ import Header from "../templates/Header";
 
 import HomeScreen from "../page/HomeScreen";
 import Error404Screen from "../page/Error404Screen";
+import Description from "../page/Description";
 
 /*utils*/
 
@@ -17,7 +18,7 @@ import resolvesRoutes from "../utils/resolveRoutes";
 
 const routes = {
   "/": HomeScreen,
-  "/:id": Header,
+  "/:id": Description,
   "/description": Error404Screen,
 };
 
@@ -40,8 +41,8 @@ const router = async () => {
   /*render my content*/
   content.innerHTML = await render();
 
-  const form = document.getElementById("form-search");
-  form.addEventListener("submit", searchForm);
+  // const form = document.getElementById("form-search");
+  // form.addEventListener("submit", searchForm);
 };
 
 export default router;

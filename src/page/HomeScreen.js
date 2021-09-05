@@ -1,7 +1,8 @@
 import getData from "../utils/getData";
+
 const HomeScreen = async (value = "dark") => {
-  console.log(value);
   const { results: data } = await getData(value);
+
   const view = `
     <section class="search-section">
       <div class="container">
@@ -29,7 +30,7 @@ const HomeScreen = async (value = "dark") => {
                   return `
                   <div class="card">
                     <div class="card__header">
-                        <a href="#" class="card__header">
+                        <a href="#/${id}/" class="card__header">
                             <img src=${pathImg}${img} alt=${title} class="card__img">
                         </a>
                     </div>
